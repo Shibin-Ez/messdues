@@ -19,11 +19,11 @@ class student{
 
 var students = [];
 
-students.push(new student("B220444CS","NOUFAL RAHIM",19500,"21052004",[],"B",144));
-students.push(new student("B220395EE","HANAN VENKITTA",17640,"06082004",[],"A",220));
-students.push(new student("B221087CS","NIVIN PRASAD",13500,"16032004",[],"B",139));
-students.push(new student("B220404CS","MOHAMMED SHIBIN",13451,"30022004",[],"B",144))
-students.push(new student("1","PROXY KA BAAP",15,"1", ["Juice","Lays","Kurkure"],"A",100))
+students.push(new student("B220444CS","NOUFAL RAHIM",19500,"21052004",["Juice","Lays","Kurkure"],"B",144));
+students.push(new student("B220395EE","HANAN VENKITTA",17640,"06082004",["Juice","Lays","Kurkure"],"A",220));
+students.push(new student("B221087CS","NIVIN PRASAD",13500,"16032004",["Biscut","Apple","Biscut","Biscut","Biscut","Orange"],"B",139));
+students.push(new student("B220404CS","MOHAMMED SHIBIN",13451,"30022004",["Biscut","Lays","Juice"],"B",144))
+students.push(new student("1","STUDENT 1",15,"1", ["Juice","Lays","Kurkure"],"A",100))
 // make sure to update size variable
 
 function loginAsStudent(){
@@ -40,6 +40,7 @@ function loginAsAdmin(){
 }
 function logout(){
     $("#"+section).fadeOut(200);
+    $(".sp-sidebar").html("");
     $("#first-page").fadeIn(400);
 }
 
@@ -67,7 +68,7 @@ function enterAsStudent(){
         section = "student-portal";
         
         var spSidebar = $(".sp-sidebar");
-        spSidebar.append('<img class="img-thumbnail sp-img" src="images/student-img/'+i+'.jpg">');
+        spSidebar.append('<img class="img-thumbnail sp-img" src="'+i+'.jpg">');
         spSidebar.append('<h3>'+students[i].name+'</h3><br><br>');
         spSidebar.append('<h4>Reg.No:'+students[i].regNo+'</h4>');
         spSidebar.append('<h4>Hostel : &emsp;'+students[i].hostel+'</h4>');
