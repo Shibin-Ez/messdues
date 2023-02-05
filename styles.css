@@ -31,7 +31,7 @@ th,td{
     text-align: center;
     height: 100vh;
     padding-top: 100px;
-    background-image: url("images/bg-first-page.jpg");
+    background-image: url("bg-first-page.jpg");
     background-size: cover;
 }
 .pre-login-btn{
@@ -40,7 +40,7 @@ th,td{
     height: 350px;
     font-size: 80px;
     font-family: 'Trebuchet MS', sans-serif;
-    background-image: url("images/bg-first-page.jpg");
+    background-image: url("bg-first-page.jpg");
     border-radius: 3%;
 }
 .admin-btn{
@@ -50,7 +50,7 @@ th,td{
 .login-page{
     padding-left:200px;
     padding-top: 100px;
-    background-image: url("images/bg-student-login.jpg");
+    background-image: url("bg-student-login.jpg");
     background-size: cover;
     height: 100vh;
 }
@@ -68,7 +68,7 @@ th,td{
 
 .portal{
     height: 100vh;
-    background-image: url("images/bg-student-portal.jpg");
+    background-image: url("bg-student-portal.jpg");
     background-size: cover;
 }
 .sp-flex{
