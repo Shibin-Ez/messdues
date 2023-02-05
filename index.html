@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mess Due</title>
+    <!--Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- fonts -->
+    <script src="https://kit.fontawesome.com/6fcfa885ab.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header-part">
+        <h1 class="heading h1-top">NITC MESS</h1>
+        <button id="logout-btn" class="hide" onclick="logout()">Logout</button>
+    </div>
+    <div id="first-page">
+        <h3>Login As</h3>
+        <button class="pre-login-btn student-btn" onclick="loginAsStudent()">Student<br><i class="fa-solid fa-graduation-cap"></i></button>
+        <button class="pre-login-btn admin-btn" onclick="loginAsAdmin()">Admin<br><i class="fa-solid fa-hotel"></i></button>
+    </div>
+    <div id="login-page-student" class="hide login-page">
+        <h2>Enter Register Number:</h2>
+        <input type="text" placeholder="eg: B220101CS" class="form-control login-input"><br><br>
+        <h2>Date of Birth:</h2>
+        <input type="text" placeholder="ddmmyy" class="form-control login-input"><br><br><br>
+        <button type="submit" class="btn btn-lg btn-light" onclick="enterAsStudent()">Submit</button>
+        <img class="nitc-logo" src="https://upload.wikimedia.org/wikipedia/en/thumb/e/e3/This_is_the_logo_of_NIT_Calicut.svg/180px-This_is_the_logo_of_NIT_Calicut.svg.png">
+    </div>
+    <div id="login-page-admin" class="hide login-page">
+        <br><br>
+        <h2>Enter Admin Code:</h2>
+        <input type="password" class="form-control login-input"><br><br>
+        <button type="submit" class="btn btn-lg btn-light" onclick="enterAsAdmin()">Submit</button>
+        <img class="nitc-logo" src="https://upload.wikimedia.org/wikipedia/en/thumb/e/e3/This_is_the_logo_of_NIT_Calicut.svg/180px-This_is_the_logo_of_NIT_Calicut.svg.png">
+    </div>
+    <div id="student-portal" class="hide portal">
+        <div class="sp-flex"> <!-- sp = student portal -->
+            <div class="sp-sidebar">
+
+            </div>
+            <div class="sp-main">
+                <h1 class="sp-h1">Amount:</h1>
+                <input type="text" value="19500 to be Refunded (Ninteen Thousand Five Hundred Only)" readonly class="form-control sp-input form-control-lg">
+                <button class="btn btn-lg btn-outline-dark sp-btn" onclick="setToMonthly()">Monthly Statement</button>
+                <button class="btn btn-lg btn-dark sp-btn" onclick="setToLast()">Last 10 Items Bought</button>
+                <button class="btn btn-lg btn-outline-dark sp-btn" onclick="setToPay()">Pay Dues</button>
+                <button class="btn btn-lg btn-outline-dark sp-btn" onclick="setToRequest()">Request Mess Cut</button>
+
+                <div id="sp-box">
+                    <div id="sp-box-0" class="hide"></div>
+                    <div id="sp-box-1"></div>
+                    <div id="sp-box-2" class="hide">
+                        <br>
+                        <h3>Transaction Methods</h3><br>
+                        <button class="btn btn-lg btn-secondary pay-btn">Google Pay</button><br>
+                        <button class="btn btn-lg btn-secondary pay-btn">Paytm</button><br>
+                        <button class="btn btn-lg btn-secondary pay-btn">Phone Pe</button><br>
+                        <button class="btn btn-lg btn-secondary pay-btn">Jio Pay</button><br>
+                    </div>
+                    <div id="sp-box-3" class="hide">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="admin-portal" class="hide portal">
+        <div class="sp-flex"> <!-- sp = student portal -->
+            <div class="sp-main">
+                <button class="btn btn-lg btn-dark sp-btn ap-btn" onclick="setToStudent()">Student Data</button>
+                <button class="btn btn-lg btn-outline-dark sp-btn ap-btn" onclick="setToAdd()">Add New Student</button>
+                <button class="btn btn-lg btn-outline-dark sp-btn ap-btn" onclick="setToUpdateAmt()">Update Amount</button>
+                <button class="btn btn-lg btn-outline-dark sp-btn ap-btn" onclick="setToUpdateFee()">Update Mess Fee</button>
+                <button class="btn btn-lg btn-outline-dark sp-btn ap-btn" onclick="setToApprove()">Approve Mess Cut</button>
+
+                <div id="ap-box">
+                    <div id="ap-box-0"></div>
+                    <div id="ap-box-1" class="hide">
+                        <h2>Enter Student Details</h2><br>
+                        <table class="ap-add-table">
+                            <tr>
+                                <td>Name</td>
+                                <td>Register Number</td>
+                            </tr>
+                            <tr>
+                                <td><input type="text" class="form-control ap-add-input"></td>
+                                <td><input type="text" class="form-control ap-add-input"></td>
+                            </tr>
+                            <tr>
+                                <td>Hostel</td>
+                                <td>Room</td>
+                            </tr>
+                            <tr>
+                                <td><input type="text" class="form-control ap-add-input"></td>
+                                <td><input type="text" class="form-control ap-add-input"></td>
+                            </tr>
+                            <tr>
+                                <td>Date of Birth</td>
+                                <td>Amount</td>
+                            </tr>
+                            <tr>
+                                <td><input type="text" class="form-control ap-add-input"></td>
+                                <td><input type="text" class="form-control ap-add-input"></td>
+                            </tr>
+                        </table>
+                        <br><br>
+                        <button type="submit" class="btn btn-lg btn-outline-secondary" onclick="addNewStudent()">Update</button>
+                    </div>
+                    <div id="ap-box-2" class="hide">
+                        Enter Register Number:
+                        <input type="text" id="ap-regAmt-input" class="form-control ap-add-input">
+                        <br><br><h2>Choose Item</h2>
+                        <button class="item-btn" onclick="itemJuice()">Juice</button>
+                        <button class="item-btn" onclick="itemLays()">Lays</button>
+                        <button class="item-btn" onclick="itemKurkure()">Kurkure</button>
+                        <button class="item-btn" onclick="itemBiscut()">Biscut</button>
+                        <button class="item-btn" onclick="itemApple()">Apple</button>
+                        <button class="item-btn" onclick="itemOrange()">Orange</button>
+                        <br><br>
+                        <button type="submit" class="btn btn-lg btn-outline-secondary" onclick="addItem()">Confirm</button>
+                    </div>
+                    <div id="ap-box-3" class="hide"></div>
+                    <div id="ap-box-4" class="hide"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script src="index.js"></script>
+</html>
+
+<tr><td></td></tr>

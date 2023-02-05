@@ -1,0 +1,153 @@
+body{
+    font-family: 'Trebuchet MS', sans-serif;
+}
+th,td{
+    padding-right: 30px;
+}
+
+
+.hide{
+    display: none;
+}
+
+.heading{
+    margin-bottom: 0px;
+}
+
+
+.h1-top{
+    color:aliceblue;
+}
+#header-part{
+    text-align: center;
+    background-color: #2D4059;
+}
+#logout-btn{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+#first-page{
+    text-align: center;
+    height: 100vh;
+    padding-top: 100px;
+    background-image: url("images/bg-first-page.jpg");
+    background-size: cover;
+}
+.pre-login-btn{
+    margin:20px 150px;
+    width: 450px;
+    height: 350px;
+    font-size: 80px;
+    font-family: 'Trebuchet MS', sans-serif;
+    background-image: url("images/bg-first-page.jpg");
+    border-radius: 3%;
+}
+.admin-btn{
+    background-position: right;
+}
+
+.login-page{
+    padding-left:200px;
+    padding-top: 100px;
+    background-image: url("images/bg-student-login.jpg");
+    background-size: cover;
+    height: 100vh;
+}
+.login-input{
+    width:340px;
+}
+.nitc-logo{
+    position:absolute;
+    right: 170px;
+    top: 100px;
+}
+
+#login-page-admin{
+}
+
+.portal{
+    height: 100vh;
+    background-image: url("images/bg-student-portal.jpg");
+    background-size: cover;
+}
+.sp-flex{
+    display: flex;
+}
+.sp-sidebar{
+    padding-left: 25px;
+}
+.sp-img{
+    width: 200px;
+}
+.sp-main{
+    padding-left: 100px;
+    padding-top: 50px;
+}
+.sp-input{
+    color: green;
+    width: 1100px;
+    margin-bottom: 100px;
+}
+.sp-btn{
+    
+}
+.sp-h1{
+    width: 200px;
+}
+#sp-box{
+    font-family: 'Courier New', monospace;
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 50px;
+    padding-left: 50px;
+    padding-top: 30px;
+    width: 1100px;
+    height: 600px;
+    background-color: white;
+    border: 1px solid black;
+}
+.monthly-table,#sp-box-0 td,#sp-box-0 th{
+    border: 2px solid;
+    border-collapse: collapse;
+    border-style: dashed;
+    padding-left: 15px;
+}
+#sp-box-2{
+    font-family: Verdana, sans-serif;
+}
+.pay-btn{
+    margin-bottom: 18px;
+}
+#ap-box{
+    font-family: 'Courier New', monospace;
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 50px;
+    padding-left: 50px;
+    padding-top: 30px;
+    width: 1200px;
+    height: 600px;
+    background-color: white;
+    border: 1px solid black;
+}
+.monthly-table,#ap-box-0 td,#ap-box-0 th{
+    border: 2px solid;
+    border-collapse: collapse;
+    border-style: dashed;
+    padding-left: 15px;
+}
+.ap-add-table td{
+    padding-bottom: 15px;
+}
+.ap-add-input{
+    width:340px;
+}
+.item-btn{
+    height: 60px;
+    border-radius: 5%;
+    background-color:beige;
+}
+.item-btn-dark{
+    background-color: chartreuse;
+}
